@@ -2,6 +2,48 @@
 
 @main("Welcome to Play") {
 
-    @play20.welcome(message)
+    <button id="jsLogGPS" class="btn btn-primary btn-lg">Log GPS</button>
+    <ol id="jsCurrentLogList"></ol>
+    <script type="text/javascript">
+        var log_gps_button = document.getElementById("jsLogGPS");
+        var current_log_list = document.getElementById("jsCurrentLogList");
+        var is_processing = false;
+        var log_array = JSON.parse(localStorage.getItem('gps_log_array'));
+        if (!log_array) {
+            log_array = [];
+        }
+        log_array.forEach(function(gps_log) {
+            appendResult(current_log_list, gps_log);
+        });
+        log_gps_button.addEventListener('click', function() {
+            if (is_processing) {
+                return;
+            }
+            is_processing = true;
+            navigator.geolocation.getCurrentPosition(
+                function(pos) {
+                    var gps_log = {
+                        'time': new Date().getTime(),
+                        'latitude': pos.coords.latitude,
+                        'longitude': pos.coords.longitude
+                    };
+                    log_array.push(gps_log);
+                    appendResult(current_log_list, gps_log);
+                    localStorage.setItem('gps_log_array', JSON.stringify(log_array));
+                    is_processing = false;
+                },
+                function() {
+                    alert('Failed to get GPS data');
+                    is_processing = false;
+                    return false;
+                }
+            );
+        });
+        function appendResult(parent, gps_log) {
+            var li = document.createElement('li');
+            li.textContent = gps_log.time + ' ' + gps_log.latitude + ' ' + gps_log.longitude;
+            parent.appendChild(li);
+        }
+    </script>
 
 }
