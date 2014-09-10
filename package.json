@@ -4,8 +4,14 @@
   "description": "GPS logger running on the WEB",
   "author": "kimamula",
   "license": "BSD",
+  "engines": {
+    "node": "0.10.30"
+  },
   "scripts": {
-    "postinstall": "bower install"
+    "postinstall": "node_modules/.bin/bower install"
+  },
+  "dependencies": {
+    "bower": "^1.3.9"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
