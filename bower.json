@@ -1,0 +1,22 @@
+{
+  "name": "web-gps-logger",
+  "version": "0.0.0",
+  "moduleType": [
+    "amd"
+  ],
+  "authors": [
+    "kimamula"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue": "~0.10.6",
+    "bootstrap": "~3.2.0"
+  }
+}

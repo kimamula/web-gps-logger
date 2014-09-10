@@ -1,0 +1,20 @@
+{
+  "name": "web-gps-logger",
+  "version": "0.0.0",
+  "description": "GPS logger running on the WEB",
+  "author": "kimamula",
+  "license": "BSD",
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-typescript": "^0.3.8",
+    "grunt-contrib-jasmine": "^0.7.0",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-tslint": "^0.4.2",
+    "grunt-lintspaces": "^0.6.0"
+  }
+}
