@@ -3,9 +3,11 @@
 @main("Welcome to Play") {
 
     <button id="jsLogGPS" class="btn btn-primary btn-lg">Log GPS</button>
+    <button id="jsRemoveLastLog" class="btn btn-danger btn-lg">Remove Last Log</button>
     <ol id="jsCurrentLogList"></ol>
     <script type="text/javascript">
         var log_gps_button = document.getElementById("jsLogGPS");
+        var remove_last_log_button = document.getElementById("jsRemoveLastLog");
         var current_log_list = document.getElementById("jsCurrentLogList");
         var is_processing = false;
         var log_array = JSON.parse(localStorage.getItem('gps_log_array'));
@@ -38,6 +40,18 @@
                     return false;
                 }
             );
+        });
+        remove_last_log_button.addEventListener('click', function() {
+            if (is_processing) {
+                return;
+            }
+            var log_array = JSON.parse(localStorage.getItem('gps_log_array'));
+            log_array.pop();
+            current_log_list.innerHTML = '';
+            log_array.forEach(function(gps_log) {
+                appendResult(current_log_list, gps_log);
+            });
+            localStorage.setItem('gps_log_array', JSON.stringify(log_array));
         });
         function appendResult(parent, gps_log) {
             var li = document.createElement('li');
