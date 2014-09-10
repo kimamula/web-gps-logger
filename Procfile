@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/web-gps-logger -Dhttp.port=$PORT
+web: ./activator -Dhttp.port=$PORT start
