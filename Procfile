@@ -1,1 +1,1 @@
-web: sbt clean stage && target/universal/stage/bin/web-gps-logger -Dhttp.port=$PORT
+web: target/universal/stage/bin/web-gps-logger -Dhttp.port=$PORT
