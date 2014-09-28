@@ -1,0 +1,1 @@
+declare var Polymer: (tagName?: string, obj?: any) => void;

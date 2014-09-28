@@ -1,0 +1,13 @@
+lintspaces: {
+    typescript: {
+        src: [
+            'public/components/**/*.ts'
+        ],
+        options: {
+            newline: true,
+            trailingspaces: true,
+            indentation: 'tabs',
+            ignores: ['js-comments']
+        }
+    }
+}

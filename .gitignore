@@ -13,4 +13,9 @@ tmp
 /RUNNING_PID
 /.settings
 node_modules
-public/bower_components
+bower_components
+public/lib
+.grunt
+typings/*
+!typings/polymer
+.tscache

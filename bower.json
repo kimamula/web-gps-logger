@@ -16,7 +16,10 @@
     "tests"
   ],
   "dependencies": {
-    "vue": "~0.10.6",
-    "bootstrap": "~3.2.0"
+    "bootstrap": "~3.2.0",
+    "polymer": "Polymer/polymer#~0.4.1"
+  },
+  "devDependencies": {
+    "jasmine-jquery": "~2.0.5"
   }
 }
