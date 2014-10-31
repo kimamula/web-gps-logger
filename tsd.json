@@ -8,11 +8,11 @@
     "jquery/jquery.d.ts": {
       "commit": "b0b4af1223f4f9449012688fa0c18f20cc3267e7"
     },
-    "jasmine/jasmine.d.ts": {
-      "commit": "4c9f4a5240591d7e09958d466071fe9bb8ccea4a"
+    "mocha/mocha.d.ts": {
+      "commit": "bba33bcb0b363ae41db8517a09d1a4d07828616b"
     },
-    "jasmine-jquery/jasmine-jquery.d.ts": {
-      "commit": "4c9f4a5240591d7e09958d466071fe9bb8ccea4a"
+    "assert/assert.d.ts": {
+      "commit": "bba33bcb0b363ae41db8517a09d1a4d07828616b"
     }
   }
 }

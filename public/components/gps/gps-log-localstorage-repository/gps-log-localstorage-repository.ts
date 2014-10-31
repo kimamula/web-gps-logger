@@ -1,10 +1,10 @@
-///<reference path='../model/gps-log.ts'/>
-///<reference path='../../../typings/tsd.d.ts'/>
-module ModelGpsLogLocalstorageRepository {
+///<reference path='../gps-log/gps-log.ts'/>
+///<reference path='../../../../typings/tsd.d.ts'/>
+module Gps {
 	'use strict';
 	import GpsLogEntry = ModelGpsLog.GpsLogEntry;
 	import GpsLogRepository = ModelGpsLog.GpsLogRepository;
-	class GpsLogLoalstorageRepository implements GpsLogRepository {
+	export class GpsLogLocalstorageRepository implements GpsLogRepository {
 		gpsLog: GpsLogEntry[];
 		created(): void {
 			this.gpsLog = JSON.parse(localStorage.getItem('gps_log_array')) || [];
@@ -14,5 +14,5 @@ module ModelGpsLogLocalstorageRepository {
 		}
 	}
 
-	Polymer('gps-log-localstorage-repository', GpsLogLoalstorageRepository.prototype);
+	Polymer('gps-log-localstorage-repository', GpsLogLocalstorageRepository.prototype);
 }

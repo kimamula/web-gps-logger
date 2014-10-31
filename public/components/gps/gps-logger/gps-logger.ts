@@ -1,7 +1,7 @@
-///<reference path='../model/gps-log.ts'/>
-///<reference path='../../../typings/tsd.d.ts'/>
+///<reference path='../gps-log/gps-log.ts'/>
+///<reference path='../../../../typings/tsd.d.ts'/>
 
-module ModelGpsLogger {
+module GpsLogger {
 	'use strict';
 	import GpsLogEntry = ModelGpsLog.GpsLogEntry;
 	import GpsLogRepository = ModelGpsLog.GpsLogRepository;

@@ -20,6 +20,6 @@
     "polymer": "Polymer/polymer#~0.4.1"
   },
   "devDependencies": {
-    "jasmine-jquery": "~2.0.5"
+    "power-assert": "~0.9.1"
   }
 }

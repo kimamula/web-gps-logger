@@ -15,7 +15,6 @@ tmp
 node_modules
 bower_components
 public/lib
-.grunt
 typings/*
 !typings/polymer
 .tscache

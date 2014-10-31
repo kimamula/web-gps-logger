@@ -1,8 +1,8 @@
 @(message: String)
 
 @main("Web GPS Logger") {
-    <link rel="import" href="@routes.Assets.at("components/gps-log-localstorage-repository/gps-log-localstorage-repository.html")">
-    <link rel="import" href="@routes.Assets.at("components/gps-logger/gps-logger.html")">
+    <link rel="import" href="@routes.Assets.at("components/gps/gps-log-localstorage-repository/gps-log-localstorage-repository.html")">
+    <link rel="import" href="@routes.Assets.at("components/gps/gps-logger/gps-logger.html")">
 } {
     <gps-log-localstorage-repository></gps-log-localstorage-repository>
     <gps-logger repository="gps-log-localstorage-repository"></gps-logger>
