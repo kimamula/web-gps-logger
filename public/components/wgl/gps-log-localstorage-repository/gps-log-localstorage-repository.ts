@@ -1,9 +1,7 @@
 ///<reference path='../gps-log/gps-log.ts'/>
 ///<reference path='../../../../typings/tsd.d.ts'/>
-module Gps {
+module Wgl {
 	'use strict';
-	import GpsLogEntry = ModelGpsLog.GpsLogEntry;
-	import GpsLogRepository = ModelGpsLog.GpsLogRepository;
 	export class GpsLogLocalstorageRepository implements GpsLogRepository {
 		gpsLog: GpsLogEntry[];
 		created(): void {

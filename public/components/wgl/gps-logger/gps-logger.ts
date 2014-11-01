@@ -1,10 +1,8 @@
 ///<reference path='../gps-log/gps-log.ts'/>
 ///<reference path='../../../../typings/tsd.d.ts'/>
 
-module GpsLogger {
+module Wgl {
 	'use strict';
-	import GpsLogEntry = ModelGpsLog.GpsLogEntry;
-	import GpsLogRepository = ModelGpsLog.GpsLogRepository;
 	class GpsLogger {
 		gpsLog: GpsLogEntry[];
 		repository: string;
@@ -38,6 +36,12 @@ module GpsLogger {
 				return;
 			}
 			this.gpsLog.pop();
+		}
+		clearAllLog(): void {
+			this.gpsLog.length = 0;
+		}
+		convertToDate(time: number): Date {
+			return new Date(time);
 		}
 	}
 

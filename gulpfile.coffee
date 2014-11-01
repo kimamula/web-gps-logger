@@ -30,8 +30,8 @@ libArray.forEach (lib) ->
 gulp.task 'symlink', () ->
   rs 'clear-symlink', libArray.map (lib) -> 'symlink-' + lib.name
 
-productBase = 'public/components/pictomo/'
-specBase = 'test/components/pictomo/'
+productBase = 'public/components/wgl/'
+specBase = 'test/components/wgl/'
 productTs = productBase + '**/*.ts'
 specTs = specBase + '**/*.ts'
 

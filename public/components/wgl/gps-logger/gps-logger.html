@@ -1,0 +1,21 @@
+<link rel="import" href="../../../lib/polymer/polymer.html">
+<polymer-element name="gps-logger" attributes="repository">
+    <template>
+        <link rel="stylesheet" href="../../../lib/bootstrap/css/bootstrap.min.css">
+        <ul>
+            <li>
+                <button on-click="{{logGps}}" class="btn btn-primary btn-lg">Log GPS</button>
+            </li>
+            <li>
+                <button on-click="{{removeLastLog}}" class="btn btn-warning btn-lg">Remove the last log</button>
+            </li>
+            <li>
+                <button on-click="{{clearAllLog}}" class="btn btn-danger btn-lg">Clear all Log</button>
+            </li>
+        </ul>
+        <template if="{{gpsLog.length > 0}}">
+            <p>The last log recorded at {{convertToDate(gpsLog[gpsLog.length - 1].time)}}</p>
+        </template>
+    </template>
+    <script src="gps-logger.js"></script>
+</polymer-element>

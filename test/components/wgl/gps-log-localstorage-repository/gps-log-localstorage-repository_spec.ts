@@ -1,8 +1,8 @@
 ///<reference path='../spec_helper.ts'/>
-module GpsLogLocalstorageRepositorySpec {
+module WglSpec {
 	'use strict';
 
-	import GpsLogLoalstorageRepository = Gps.GpsLogLocalstorageRepository;
+	import GpsLogLoalstorageRepository = Wgl.GpsLogLocalstorageRepository;
 
 	describe('GpsLogLoalstorageRepository', () => {
 		describe('created', () => {

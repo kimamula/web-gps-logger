@@ -1,4 +1,4 @@
-module ModelGpsLog {
+module Wgl {
 	'use strict';
 	export interface GpsLogEntry {
 		time: number;
