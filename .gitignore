@@ -18,3 +18,7 @@ public/lib
 typings/*
 !typings/polymer
 .tscache
+public/components/**/*.js
+public/components/**/*.js.map
+test/components/wgl/ref.js
+test/components/wgl/ref.ts
