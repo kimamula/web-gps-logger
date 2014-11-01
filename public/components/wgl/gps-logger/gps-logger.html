@@ -2,17 +2,20 @@
 <polymer-element name="gps-logger" attributes="repository">
     <template>
         <link rel="stylesheet" href="../../../lib/bootstrap/css/bootstrap.min.css">
-        <ul>
-            <li>
-                <button on-click="{{logGps}}" class="btn btn-primary btn-lg">Log GPS</button>
-            </li>
-            <li>
-                <button on-click="{{removeLastLog}}" class="btn btn-warning btn-lg">Remove the last log</button>
-            </li>
-            <li>
-                <button on-click="{{clearAllLog}}" class="btn btn-danger btn-lg">Clear all Log</button>
-            </li>
-        </ul>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" checked="{{logInterval}}">Enable auto logging
+            </label>
+        </div>
+        <template if="{{logInterval}}">
+            <div class="form-group">
+                <label for="logInterval">Log interval (min)</label>
+                <input type="text" class="form-control" id="logInterval" value="{{logInterval * 1}}">
+            </div>
+        </template>
+        <button on-click="{{logGps}}" class="btn btn-primary btn-lg btn-block">Log GPS</button>
+        <button on-click="{{removeLastLog}}" class="btn btn-warning btn-lg btn-block">Remove the last log</button>
+        <button on-click="{{clearAllLog}}" class="btn btn-danger btn-lg btn-block">Clear all Log</button>
         <template if="{{gpsLog.length > 0}}">
             <p>The last log recorded at {{convertToDate(gpsLog[gpsLog.length - 1].time)}}</p>
         </template>

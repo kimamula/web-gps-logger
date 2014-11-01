@@ -6,6 +6,8 @@ module Wgl {
 	class GpsLogger {
 		gpsLog: GpsLogEntry[];
 		repository: string;
+		logInterval = 0;
+		timer: number;
 		private isProcessing = false;
 		ready(): void {
 			this.gpsLog = (<GpsLogRepository>(<any>document.querySelector(this.repository))).gpsLog;
@@ -40,8 +42,18 @@ module Wgl {
 		clearAllLog(): void {
 			this.gpsLog.length = 0;
 		}
-		convertToDate(time: number): Date {
-			return new Date(time);
+		convertToDate(time: number): string {
+			return new Date(time).toLocaleString();
+		}
+		logIntervalChanged(): void {
+			if (this.timer) {
+				clearInterval(this.timer);
+			}
+			if (this.logInterval) {
+				this.timer = setInterval(() => {
+					this.logGps();
+				}, this.logInterval * 60000);
+			}
 		}
 	}
 

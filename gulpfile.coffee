@@ -124,8 +124,8 @@ gulp.task 'watch', () ->
     gulp.src event.path
     .pipe lint()
     .pipe buildUglify()
-    .pipe gulp.dest getDir event.path
     .on 'error', onWatchError
+    .pipe gulp.dest getDir event.path
     .on 'end', () ->
       runSpec()
       .on 'error', onWatchError
