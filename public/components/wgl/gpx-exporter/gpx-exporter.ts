@@ -6,6 +6,9 @@ module Wgl {
         gpsLog: GpsLogEntry[];
         repository: string;
         gpxText: string;
+        $: {
+            gpxText: HTMLDivElement
+        };
         ready(): void {
             this.gpsLog = (<GpsLogRepository>(<any>document.querySelector(this.repository))).gpsLog;
         }
@@ -18,6 +21,17 @@ module Wgl {
                 this.gpxText = null;
             } else {
                 this.gpxText = this.convertToGpx();
+            }
+        }
+
+        selectGpxText(): void {
+            if (!this.gpxText) {
+                return;
+            }
+            if (window.getSelection) {
+                var range = document.createRange();
+                range.selectNode(this.$.gpxText);
+                window.getSelection().addRange(range);
             }
         }
 

@@ -6,10 +6,8 @@
             <button on-click="{{exportByEmail}}" class="btn btn-success btn-lg btn-block">Send GPX by Email</button>
             <button on-click="{{exportAsText}}" class="btn btn-success btn-lg btn-block">Show/Hide raw GPX</button>
             <p class="text-warning">Note: The email button may not work depending on your environment.</p>
-            <template if="{{gpxText}}">
-                <div>{{gpxText}}</div>
-            </template>
         </template>
+        <div id="gpxText" on-click="{{selectGpxText}}" hidden?="{{!gpxText}}">{{gpxText}}</div>
     </template>
     <script src="gpx-exporter.js"></script>
 </polymer-element>
