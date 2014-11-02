@@ -29,9 +29,11 @@ module Wgl {
                 return;
             }
             if (window.getSelection) {
+                var selection = window.getSelection();
                 var range = document.createRange();
-                range.selectNode(this.$.gpxText);
-                window.getSelection().addRange(range);
+                range.selectNodeContents(this.$.gpxText);
+                selection.removeAllRanges();
+                selection.addRange(range);
             }
         }
 
