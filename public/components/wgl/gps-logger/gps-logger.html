@@ -7,6 +7,7 @@
                 <input type="checkbox" checked="{{logInterval}}">Enable auto logging
             </label>
         </div>
+        <p class="text-danger">Note: Auto logging does NOT work when this page is in the background</p>
         <template if="{{logInterval}}">
             <div class="form-group">
                 <label for="logInterval">Log interval (min)</label>
@@ -15,7 +16,7 @@
         </template>
         <button on-click="{{logGps}}" class="btn btn-primary btn-lg btn-block">Log GPS</button>
         <button on-click="{{removeLastLog}}" class="btn btn-warning btn-lg btn-block">Remove the last log</button>
-        <button on-click="{{clearAllLog}}" class="btn btn-danger btn-lg btn-block">Clear all Log</button>
+        <button on-click="{{clearAllLog}}" class="btn btn-danger btn-lg btn-block">Clear all log</button>
         <template if="{{gpsLog.length > 0}}">
             <p>The last log recorded at {{convertToDate(gpsLog[gpsLog.length - 1].time)}}</p>
         </template>

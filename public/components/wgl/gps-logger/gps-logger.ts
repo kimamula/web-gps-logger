@@ -22,7 +22,8 @@ module Wgl {
 					var gpsLog = {
 						'time': new Date().getTime(),
 						'latitude': position.coords.latitude,
-						'longitude': position.coords.longitude
+						'longitude': position.coords.longitude,
+						'altitude': position.coords.altitude
 					};
 					this.gpsLog.push(gpsLog);
 					this.isProcessing = false;

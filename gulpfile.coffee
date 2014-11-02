@@ -137,3 +137,6 @@ gulp.task 'watch', () ->
     .on 'end', () ->
       runSpec()
       .on 'error', onWatchError
+
+gulp.task 'release', () ->
+  rs 'symlink', 'build'

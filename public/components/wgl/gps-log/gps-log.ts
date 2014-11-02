@@ -4,6 +4,7 @@ module Wgl {
 		time: number;
 		latitude: number;
 		longitude: number;
+		altitude: number;
 	}
 
 	export interface GpsLogRepository {

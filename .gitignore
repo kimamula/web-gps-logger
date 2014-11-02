@@ -16,7 +16,8 @@ node_modules
 bower_components
 public/lib
 typings/*
-!typings/polymer
+!typings/polymer/*
+!typings/tsd.d.ts
 .tscache
 public/components/**/*.js
 public/components/**/*.js.map

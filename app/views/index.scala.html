@@ -3,7 +3,9 @@
 @main("Web GPS Logger") {
     <link rel="import" href="@routes.Assets.at("components/wgl/gps-log-localstorage-repository/gps-log-localstorage-repository.html")">
     <link rel="import" href="@routes.Assets.at("components/wgl/gps-logger/gps-logger.html")">
+    <link rel="import" href="@routes.Assets.at("components/wgl/gpx-exporter/gpx-exporter.html")">
 } {
     <gps-log-localstorage-repository></gps-log-localstorage-repository>
     <gps-logger repository="gps-log-localstorage-repository"></gps-logger>
+    <gpx-exporter repository="gps-log-localstorage-repository"></gpx-exporter>
 }
